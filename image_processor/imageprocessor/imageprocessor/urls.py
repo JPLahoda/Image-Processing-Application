@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from processor import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('', views.upload_image, name='upload_image'),
+    path('image/<int:image_id>/', views.display_image, name='display_image'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

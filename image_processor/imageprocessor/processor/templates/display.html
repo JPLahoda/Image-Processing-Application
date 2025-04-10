@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Processed Image</title>
+</head>
+<body>
+    <h1>Processed Image</h1>
+    <h2>Original Image</h2>
+    <img src="{{ image.original_image.url }}" alt="Original Image" style="max-width: 500px;">
+    
+    <h2>Processed Image ({{ image.get_filter_type_display }})</h2>
+    <img src="{{ image.processed_image.url }}" alt="Processed Image" style="max-width: 500px;">
+    
+    <a href="{{ image.processed_image.url }}" download>Download Processed Image</a>
+</body>
+</html>
