@@ -7,7 +7,7 @@ class ImageUploadForm(forms.ModelForm):
         ('sepia', 'Sepia'),
         ('blur', 'Blur'),
         ('edge', 'Edge Detection'),
-        ('poster', 'Posterize'),
+        #('poster', 'Posterize'),
         ('solar', 'Solarize'),
     ]
     
